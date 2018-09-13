@@ -16,5 +16,11 @@ namespace DigitalRoot
         {
             InitializeComponent();
         }
+
+        private void RunBTN_Click(object sender, EventArgs e)
+        {
+            var Testing = new DigitalRoot();
+            Testing.GetDigitalRoot(Convert.ToInt32(NumberField.Text));
+        }
     }
 }
