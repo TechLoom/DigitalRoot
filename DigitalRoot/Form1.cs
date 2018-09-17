@@ -19,8 +19,18 @@ namespace DigitalRoot
 
         private void RunBTN_Click(object sender, EventArgs e)
         {
-            var Testing = new DigitalRoot();
-            Testing.GetDigitalRoot(Convert.ToInt32(NumberField.Text));
+            var testing = new DigitalRoot();
+
+            if (NumberField.Text == string.Empty)
+            {
+                MessageBox.Show("Please enter a value number");
+            }
+            else
+            {
+                int result = testing.GetValue(Convert.ToInt32(NumberField.Text));
+                DigitalRootResult.Text = $"Result: {result}";
+            }
+
         }
     }
 }
